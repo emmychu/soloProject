@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client';
 import App from './components/app.jsx';
 import { Provider } from 'react-redux';
 import store from './store';
+import { getPlants } from './getPlants';
+
+store.dispatch(getPlants);
 
 const container = document.getElementById('root');
 

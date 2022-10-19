@@ -13,7 +13,7 @@ plantController.getAllPlants = async (req, res, next) => {
 
 plantController.addPlant = async (req, res, next) => {
   try {
-    const newPlant = await plant.Plant.create(req.query);
+    const newPlant = await plant.Plant.create(req.body);
     next();
   } catch (error) {
     console.log('error', error);

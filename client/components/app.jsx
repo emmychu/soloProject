@@ -4,7 +4,7 @@ import MainContainer from '../containers/main.jsx';
 import { useState } from 'react';
 
 const App = (props) => {
-  return <MainContainer plantList={plantList} />;
+  return <MainContainer />;
 };
 
 export default App;

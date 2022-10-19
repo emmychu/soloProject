@@ -6,9 +6,9 @@ import * as types from '../constants/actiontypes';
 //   payload: newLocation,
 // });
 
-export const addPlant = (obj) => ({
+export const addPlant = (name) => ({
   type: types.ADD_PLANT,
-  payload: obj,
+  payload: name,
 });
 
 export const deletePlant = (placeholder) => ({

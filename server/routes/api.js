@@ -9,7 +9,7 @@ router.get('/', plantController.getAllPlants, (req, res) =>
 router.get('/:plant', (req, res) => res.status(200));
 
 router.post('/plant', plantController.addPlant, (req, res) => {
-  return res.status(200).json('added');
+  return res.status(200).json({});
 });
 
 module.exports = router;
