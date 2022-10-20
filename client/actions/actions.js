@@ -11,7 +11,12 @@ export const addPlant = (name) => ({
   payload: name,
 });
 
-export const deletePlant = (placeholder) => ({
+export const updatePlant = (obj) => ({
+  type: types.UPDATE_PLANT,
+  payload: obj,
+});
+
+export const deletePlant = (name) => ({
   type: types.DELETE_PLANT,
-  payload: placeholder,
+  payload: name,
 });

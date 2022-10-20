@@ -18,7 +18,7 @@ export async function getPlants(dispatch, getState) {
   try {
     const response = await fetch('http://localhost:3000/api/', {
       method: 'GET',
-      mode: 'cors',
+      mode: 'no-cors',
       credentials: 'include',
     });
     const data = await response.json();

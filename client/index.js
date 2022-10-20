@@ -5,6 +5,8 @@ import { Provider } from 'react-redux';
 import store from './store';
 import { getPlants } from './getPlants';
 
+import styles from './styles/styles.scss';
+
 store.dispatch(getPlants);
 
 const container = document.getElementById('root');

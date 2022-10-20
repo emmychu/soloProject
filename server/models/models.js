@@ -35,6 +35,7 @@ const User = mongoose.model('user', userSchema);
 
 const plantSchema = new Schema({
   name: { type: String, required: true },
+  // type: String,
   location: String,
   last_water: Date,
   last_fertilizer: Date,

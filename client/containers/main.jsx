@@ -2,14 +2,14 @@ const React = require('react');
 import Plant from '../components/plant.jsx';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
-import NavBar from './nav.jsx';
 
 const mapStateToProps = (state) => ({
   plantList: state.plants.plantList,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  addPlant: (data) => dispatch(actions.addPlant(data)),
+  updatePlant: (obj) => dispatch(actions.updatePlant(obj)),
+  deletePlant: (name) => dispatch(actions.deletePlant(name)),
 });
 
 const options = {
@@ -21,9 +21,12 @@ const options = {
 
 function convertDate(str) {
   const cut = str.indexOf('T');
-  const newDate = new Date(str.slice(0, cut));
-  let convert = newDate.toLocaleDateString('en-US');
-  return convert;
+  if (cut !== -1) {
+    const newDate = new Date(str.slice(0, cut));
+    let convert = newDate.toLocaleDateString('en-US', { timeZone: 'UTC' });
+    return convert;
+  }
+  return str;
 }
 
 const MainContainer = (props) => {
@@ -50,14 +53,15 @@ const MainContainer = (props) => {
         water={water}
         fert={fert}
         notes={plant.notes}
+        updatePlant={props.updatePlant}
+        deletePlant={props.deletePlant}
       />
     );
   });
   return (
     <div id='main-container'>
-      <h1 id='hi'>Plant Friends</h1>
-      <NavBar addPlant={props.addPlant} />
-      {plantArr}
+      <h1 id='plant-friends'>I Wet My Plants</h1>
+      <div id='plants-container'>{plantArr}</div>
     </div>
   );
 };

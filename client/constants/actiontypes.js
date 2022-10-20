@@ -3,5 +3,5 @@
 
 export const ADD_PLANT = 'ADD_PLANT';
 export const DELETE_PLANT = 'DELETE_PLANT';
-export const SET_DATE = 'SET_DATE';
+export const UPDATE_PLANT = 'UPDATE_PLANT';
 export const LOAD = 'LOAD';
