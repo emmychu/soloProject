@@ -55,7 +55,7 @@ const Plant = (props) => {
               Location:
             </label>
             <span id='location' className={'details-' + props.plantName}>
-              {' ' + props.location}
+              {props.location}
             </span>
           </p>
           <p>
@@ -87,7 +87,7 @@ const Plant = (props) => {
               Notes:
             </label>
             <span id='notes' className={'details-' + props.plantName}>
-              {' ' + props.notes}
+              {props.notes}
             </span>
           </p>
         </div>

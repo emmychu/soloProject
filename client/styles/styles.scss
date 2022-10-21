@@ -32,31 +32,43 @@ label {
   height: 100%;
   font-family: 'Questrial', sans-serif;
   font-size: 17px;
+  margin-bottom: 30px;
 }
 #cold {
+  display: flex;
+  justify-content: center;
+  align-content: center;
   padding: 10px;
   background-color: rgb(198, 230, 248);
   text-align: center;
   border-radius: 10px;
-  height: 50px;
-  width: 400px;
+  height: 75px;
+  width: 450px;
   bottom: 25px;
   right: 25px;
+  font-size: 20px;
   position: fixed;
   color: rgb(79, 79, 207);
   font-family: 'Questrial', sans-serif;
+  padding-top: 15px;
 }
 #hot {
+  display: flex;
+  justify-content: center;
+  align-content: center;
   padding: 10px;
   background-color: rgb(223, 188, 188);
-  border-radius: 10px;
-  height: 50px;
-  width: 400px;
   text-align: center;
-  top: 25px;
+  border-radius: 10px;
+  height: 75px;
+  width: 450px;
+  bottom: 25px;
+  right: 25px;
+  font-size: 20px;
   position: fixed;
   color: rgb(73, 29, 17);
   font-family: 'Questrial', sans-serif;
+  padding-top: 15px;
 }
 
 .plants-box {
@@ -68,6 +80,9 @@ label {
   margin: 15px;
   padding-top: 10px;
   box-shadow: 5px 5px 10px #6c6061;
+  label {
+    padding-right: 5px;
+  }
 }
 
 span {
@@ -102,6 +117,9 @@ span {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    label {
+      padding-left: 2px;
+    }
   }
 
   #addButton {

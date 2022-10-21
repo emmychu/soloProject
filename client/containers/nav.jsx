@@ -24,7 +24,7 @@ async function addPlantToServer(obj) {
 }
 
 const getWeather = async (url, key) => {
-  let response = await fetch(baseURL + 20817 + api);
+  let response = await fetch(baseURL + 78641 + api);
   try {
     let data = await response.json();
     let weatherData = [
@@ -50,7 +50,7 @@ const getWeather = async (url, key) => {
         hot.remove();
       };
     }
-    if (weatherData[2] < 60 || weatherData[1] < 60 || weatherData[3] < 60) {
+    if (weatherData[2] < 50 || weatherData[1] < 50 || weatherData[3] < 50) {
       anc.insertAdjacentHTML(
         'beforebegin',
         `<div id='cold'>Wow! It looks kind of cold today! Make sure to take in any outdoor plants that might not like that :)</div>`
